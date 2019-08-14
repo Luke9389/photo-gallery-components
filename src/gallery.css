@@ -1,0 +1,91 @@
+#options-panel {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+#options-panel select {
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+main {
+    background-color: #333;
+}
+
+
+/* Ideas for masonry look in pure CSS from: https://w3bits.com/css-masonry/  */
+#gallery {
+    column-count: 4;
+    column-gap: 13px;
+    margin-left: 13px;
+    max-width: 1400px;
+}
+@media only screen and (max-width: 1400px) and (min-width: 768px) {
+    #gallery {
+      column-count: 3;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #gallery {
+      column-count: 2;
+    }
+}
+
+
+.card {
+    display: inline-block;
+    width: 100%;
+    margin-top: 13px;
+    position: relative;
+    background-image: linear-gradient(to left, #5EBD3E, #FFB900, #F78200, #E23838, #973999, #009CDF, #5EBD3E);
+    background-size: 200%;
+    background-position: 30% 50%;
+    animation-name: move-gradient-on-card;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 13s;
+    border-radius: 20px;
+}
+@keyframes move-gradient-on-card {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+
+.gallery-image {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.gallery-text {
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #bbb;
+    opacity: 0.7;
+}
+.gallery-text h2 {
+    font-size: 1.2em;
+    margin: 10px;
+    text-align: center;
+}
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: gold;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    font-size: 1.2em;
+    text-align: center;
+}

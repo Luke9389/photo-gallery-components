@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    height: 100vh;
+    min-width: 390px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: space-between;
+    height: 15vh;
+    padding: 10px;
+    background-image: linear-gradient(to left, #5EBD3E, #FFB900, #F78200, #E23838, #973999, #009CDF, #5EBD3E);
+    background-size: 200vw;
+    background-position: 30% 50%;
+    animation-name: move-gradient;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 13s;
+}
+
+@keyframes move-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.logo {
+    margin-left: 10px;
+    height: 70px;
+    width: 70px;
+    padding: -5px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.logo img {
+    display: block;
+    height: 130px;
+    margin-left: -55px;
+    margin-top: -52%;
+}
+
+header h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    font-size: 1.6em;
+}
+
+@media(max-width: 590px) {
+    header {
+        height: 18vh;
+    }
+    #nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width: 400px) {
+    header {
+        height: 20vh;
+    }
+    header h1 {
+        font-size: 1.7rem;
+    }
+}
