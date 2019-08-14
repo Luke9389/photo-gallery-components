@@ -1,4 +1,4 @@
-import { renderCardItem } from './gallery.js';
+import { renderCardItem } from './old-gallery.js';
 import images from '../assets/images.js';
 import htmlToDOM from './html-to-DOM.js';
 
