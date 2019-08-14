@@ -19,7 +19,23 @@ export class App extends Component {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
-        const filter = new Filter();
+        const filterProps = {
+            images: images,
+
+            onFilter(keyword) {
+                let filteredImages = [];
+
+                images.forEach(image => {
+                    if(image.keyword === keyword) {
+                        filteredImages.push(image);
+                    }
+                });
+                gallery.update({ images: filteredImages });
+            }
+
+        };
+
+        const filter = new Filter(filterProps);
         dom.querySelector('#options-panel').appendChild(filter.renderDOM());
 
         const sort = new Sort();

@@ -24,6 +24,10 @@ header {
     animation-duration: 13s;
 }
 
+main{
+    min-height: 100vh;
+}
+
 @keyframes move-gradient {
     0% {
         background-position: 0% 50%;
